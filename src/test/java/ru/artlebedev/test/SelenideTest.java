@@ -1,4 +1,4 @@
-package ru.artlebedev;
+package ru.artlebedev.test;
 
 
 import com.codeborne.selenide.CollectionCondition;

@@ -2,18 +2,15 @@ package ru.artlebedev.test;
 
 
 import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Configuration;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.Test;
+import ru.artlebedev.BaseTest;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class SelenideTest {
+public class SelenideTest extends BaseTest{
 
     @Test
     public void test() {
-        Configuration.browser = "chrome";
-        WebDriverManager.chromedriver().setup();
         open("https://www.artlebedev.ru");
         $("[href=\"\\/tools\\/\"]").click();
         $("#item-matrix").click();

@@ -8,7 +8,7 @@ import ru.artlebedev.pages.ToolsPage;
 
 public class SelenideTestWithPageObject extends BaseTest {
 
-    private String searchInput = "цветы";
+    private static final String searchInput = "цветы";
 
     @Test
     public void test() {

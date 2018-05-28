@@ -1,9 +1,11 @@
 package ru.artlebedev.pages;
 
+
 import static com.codeborne.selenide.Selenide.*;
 
-public class MainPage {
-    public MainPage openMainPage() {
+public class MainPage extends BasePage <MainPage> {
+
+    public static MainPage openMainPage() {
         open("https://www.artlebedev.ru");
         return page(MainPage.class);
     }

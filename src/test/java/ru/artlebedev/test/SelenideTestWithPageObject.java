@@ -8,15 +8,17 @@ import ru.artlebedev.pages.ToolsPage;
 
 public class SelenideTestWithPageObject extends BaseTest {
 
+    private String searchInput = "цветы";
+
     @Test
-    public void test(){
-       MainPage mainPage = new MainPage();
-       mainPage.openMainPage();
-       ToolsPage toolsPage = mainPage.clickOnTools();
-       MatrixPage matrixPage = toolsPage.clickIdeaMatrix();
-       matrixPage.inputSearch("цветы");
-       matrixPage.searchButton();
-       matrixPage.assertInput("цветы");
+    public void test() {
+        MainPage mainPage = new MainPage();
+        mainPage.openMainPage();
+        ToolsPage toolsPage = mainPage.clickOnTools();
+        MatrixPage matrixPage = toolsPage.clickIdeaMatrix();
+        matrixPage.inputSearch(searchInput);
+        matrixPage.searchButton();
+        matrixPage.assertInput(searchInput);
     }
 
 }

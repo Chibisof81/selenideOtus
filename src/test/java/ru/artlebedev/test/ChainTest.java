@@ -5,13 +5,16 @@ import org.testng.annotations.Test;
 import static ru.artlebedev.pages.MainPage.openMainPage;
 
 public class ChainTest {
+
+    private static final String searchInput = "цветы";
+
     @Test
     public void chainTest() {
         openMainPage()
                 .clickOnTools()
                 .clickIdeaMatrix()
-                .inputSearch("цветы")
+                .inputSearch(searchInput)
                 .searchButton()
-                .assertInput("цветы");
+                .assertInput(searchInput);
     }
 }

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
 public class EventListner implements WebDriverEventListener {
+
+
     public void beforeAlertAccept(WebDriver webDriver) {
 
     }

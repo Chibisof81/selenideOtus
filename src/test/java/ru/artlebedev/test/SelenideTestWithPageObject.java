@@ -6,9 +6,11 @@ import ru.artlebedev.pages.MainPage;
 import ru.artlebedev.pages.MatrixPage;
 import ru.artlebedev.pages.ToolsPage;
 
+import static com.codeborne.selenide.Selenide.screenshot;
+
 public class SelenideTestWithPageObject extends BaseTest {
 
-    private static final String searchInput = "цветы";
+    private static final String searchInput = "нырялка";
 
     @Test
     public void test() {
@@ -17,6 +19,7 @@ public class SelenideTestWithPageObject extends BaseTest {
         ToolsPage toolsPage = mainPage.clickOnTools();
         MatrixPage matrixPage = toolsPage.clickIdeaMatrix();
         matrixPage.inputSearch(searchInput);
+        screenshot("screenshot2");
         matrixPage.searchButton();
         matrixPage.assertInput(searchInput);
     }

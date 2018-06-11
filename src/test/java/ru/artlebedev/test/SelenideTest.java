@@ -1,7 +1,7 @@
 package ru.artlebedev.test;
 
-
 import com.codeborne.selenide.CollectionCondition;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.artlebedev.BaseTest;
 
@@ -17,6 +17,6 @@ public class SelenideTest extends BaseTest{
         $("[name=\"Word\"]").setValue("блок");
         $("button").click();
         $$(".text-double-margin").shouldHave(CollectionCondition.texts("блок"));
-
+        Assert.assertTrue(false);
     }
 }
